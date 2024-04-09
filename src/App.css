@@ -1,0 +1,253 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+label {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.login-page, .signup, .ph-num {
+  background-size: 100%;
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.538);
+}
+.login-page h4, .signup h4, .ph-num h4 {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.login-page h4:hover, .signup h4:hover, .ph-num h4:hover {
+  color: white;
+}
+.login-page video, .signup video, .ph-num video {
+  position: absolute;
+  z-index: -1;
+  height: 100vh;
+  width: 100vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.login-page .box, .signup .box, .ph-num .box {
+  background-color: rgba(0, 0, 0, 0.401);
+  border-right: 3px solid rgba(255, 255, 255, 0.464);
+  border-bottom: 3px solid rgba(255, 255, 255, 0.464);
+  color: white;
+  min-height: 500px;
+  width: 425px;
+  padding: 30px 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+.login-page .box form, .signup .box form, .ph-num .box form {
+  width: 60%;
+}
+.login-page .box form label, .signup .box form label, .ph-num .box form label {
+  margin-top: 5px;
+}
+.login-page .box form input, .signup .box form input, .ph-num .box form input {
+  padding: 5px 10px;
+  width: 100%;
+  margin-top: 5px;
+  transition: 0.3 all linear;
+}
+.login-page .box form input:focus, .signup .box form input:focus, .ph-num .box form input:focus {
+  border-left: 3px solid orange;
+}
+.login-page .box form .loginBtn, .signup .box form .loginBtn, .ph-num .box form .loginBtn {
+  width: 100%;
+  text-align: center;
+  transition: 0.3 all ease-in-out;
+  margin-bottom: 10px;
+}
+.login-page .box form .loginBtn button, .signup .box form .loginBtn button, .ph-num .box form .loginBtn button {
+  background-color: rgba(0, 0, 0, 0.325);
+  color: white;
+  border: none;
+  border: 1px solid white;
+  padding: 5px 40px;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+.login-page .box form .loginBtn button:hover, .signup .box form .loginBtn button:hover, .ph-num .box form .loginBtn button:hover {
+  background-color: white;
+  color: black;
+}
+.login-page .box form .forgetPwd span, .signup .box form .forgetPwd span, .ph-num .box form .forgetPwd span {
+  font-size: 12px;
+  color: white;
+}
+.login-page .box form .forgetPwd a, .signup .box form .forgetPwd a, .ph-num .box form .forgetPwd a {
+  text-decoration: none;
+}
+.login-page .box form .forgetPwd a:hover span, .signup .box form .forgetPwd a:hover span, .ph-num .box form .forgetPwd a:hover span {
+  color: yellow;
+}
+.login-page .box form .OR, .login-page .box form .Google, .signup .box form .OR, .signup .box form .Google, .ph-num .box form .OR, .ph-num .box form .Google {
+  text-align: center;
+}
+.login-page .box form .Google button, .signup .box form .Google button, .ph-num .box form .Google button {
+  display: flex;
+  width: 100%;
+  padding: 5px 10px;
+  border-radius: 5px;
+  justify-content: center;
+  gap: 5px;
+  align-items: center;
+}
+.login-page .box form .Google button .google-icon svg, .signup .box form .Google button .google-icon svg, .ph-num .box form .Google button .google-icon svg {
+  height: 20px;
+}
+.login-page .box form .Google button:hover, .signup .box form .Google button:hover, .ph-num .box form .Google button:hover {
+  border-color: violet;
+}
+.login-page .box form .newUser, .login-page .box form .loggedin, .signup .box form .newUser, .signup .box form .loggedin, .ph-num .box form .newUser, .ph-num .box form .loggedin {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+.login-page .box form .newUser a, .login-page .box form .loggedin a, .signup .box form .newUser a, .signup .box form .loggedin a, .ph-num .box form .newUser a, .ph-num .box form .loggedin a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+.login-page .box form .newUser a:hover, .login-page .box form .loggedin a:hover, .signup .box form .newUser a:hover, .signup .box form .loggedin a:hover, .ph-num .box form .newUser a:hover, .ph-num .box form .loggedin a:hover {
+  text-decoration: underline;
+}
+.login-page .box form .newUser p, .login-page .box form .loggedin p, .signup .box form .newUser p, .signup .box form .loggedin p, .ph-num .box form .newUser p, .ph-num .box form .loggedin p {
+  margin: 0;
+  font-size: 13px;
+  color: grey;
+}
+.login-page .Loading-content, .signup .Loading-content, .ph-num .Loading-content {
+  display: flex;
+  display: none;
+  flex-direction: column;
+  color: white;
+  align-items: center;
+}
+.login-page .Loading-content h4, .signup .Loading-content h4, .ph-num .Loading-content h4 {
+  width: 50%;
+  text-align: center;
+  padding: 5px;
+  border-left: 2px solid orange;
+  border-right: 2px solid orange;
+  border-bottom: 2px solid orange;
+}
+.login-page .Loading-content p, .signup .Loading-content p, .ph-num .Loading-content p {
+  font-size: 10px;
+  margin-top: 5px;
+}
+.login-page .Loading-content .Loading, .signup .Loading-content .Loading, .ph-num .Loading-content .Loading {
+  background-image: url("./components/images/intro/loading.gif");
+  background-position: center;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  background-size: 120% 100%;
+  background-color: rgba(0, 0, 0, 0.57);
+}
+
+.signup form .tc {
+  margin: 10px 0;
+}
+.signup form .createAcc {
+  width: 100%;
+}
+.signup form .createAcc button {
+  width: 100%;
+  padding: 5px 0;
+  border-radius: 5px;
+  outline: none;
+}
+.signup form .createAcc button:hover {
+  border-color: violet;
+}
+.signup form .tc {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.signup form .tc label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.signup form .tc label input {
+  width: auto;
+}
+.signup form .tc label p {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  line-height: 15px;
+  width: 100%;
+}
+.signup form .tc label p span {
+  color: orangered;
+  cursor: pointer;
+}
+.signup form .tc label p span:hover {
+  text-decoration: underline;
+}
+
+.ph-num .box {
+  min-height: 100px;
+  width: 400px;
+}
+.ph-num .box form[class=OTP] {
+  width: 290px;
+  overflow: hidden;
+}
+.ph-num .box form .back {
+  text-align: center;
+  margin-top: 10px;
+}
+.ph-num .box form .back a {
+  color: white;
+}
+.ph-num .box form .back a:hover {
+  color: yellow;
+}
+.ph-num .box form .btn-ph {
+  text-align: center;
+}
+.ph-num .box form .mobile-num {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+.ph-num .box form .mobile-num input {
+  height: 40px;
+  font-size: 16px;
+}
+.ph-num .box form .mobile-num input[class=country-co] {
+  width: 40px;
+}
+.ph-num .box form button {
+  width: 80%;
+  margin-top: 30px;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.ph-num .box form button:hover {
+  border: 1px solid violet;
+}/*# sourceMappingURL=App.css.map */
