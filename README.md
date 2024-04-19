@@ -12,7 +12,6 @@ Welcome to the Food Blog Project, a web application created using React.js, GSAP
 ## Technologies Used 💻
 
 - React.js
-- GSAP (GreenSock Animation Platform)
 - Firebase (Authentication and Database)
 - Bootstrap
 - External API (for recipe instructions and YouTube links)
