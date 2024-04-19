@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: 0.3 all ease-in-out;
 }
 
 html, body {
@@ -40,6 +41,7 @@ button {
   align-items: center;
   border-bottom: 1px solid rgba(128, 128, 128, 0.445);
 }
+
 .upper-nav i {
   transition: 0.4s all linear;
 }
@@ -208,6 +210,7 @@ button {
   min-width: 160px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 2;
+  padding-bottom: 10px;
 }
 
 .megaDropdown {
@@ -493,6 +496,7 @@ button {
   height: -moz-max-content;
   height: max-content;
   display: flex;
+  justify-content: center;
   gap: 25px;
   padding: 0px 80px;
   margin-bottom: 40px;
@@ -507,7 +511,7 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 20px 0px;
+  padding: 20px 10px;
 }
 
 #subscribe {
@@ -922,7 +926,7 @@ h4:hover {
 #container-ka-container #ckc-content {
   width: 45%;
   text-align: start;
-  padding-right: 5px;
+  padding-right: 30px;
 }
 #container-ka-container #ckc-content p {
   font-size: 14px;
@@ -1265,6 +1269,72 @@ input {
 }
 
 @media screen and (max-width: 700px) {
+
+  #search{
+    overflow: hidden;
+  }
+
+  #content #not-found{
+    width: 70vw;
+    overflow: hidden;
+  }
+  
+  #content #not-found img[id="tt"]{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  #search #inputSearch input[type="search"]{
+    width: 70vw;
+  }
+
+  #ggg{
+    height: 70%;
+  }
+
+  #ggg svg, #ggg #img, #ggg img{
+    height: 200px;
+    width: 250px;
+  } 
+
+  
+  #item{
+    overflow: hidden;
+    width: fit-content;
+    height: fit-content;
+  }
+
+  #content #item #receipeImg{
+    padding: 0;
+    height: fit-content;
+    width: 90%;
+    text-align: center;
+  }
+
+  #content #item h4{
+    width: 250px;
+  }
+  
+  #item #receipeImg img{
+    height: 150px;
+    width: 200px;
+  }
+
+
+
+  #ggg #cross{
+    padding-right: 50px;
+    margin-bottom: 10px;
+  }
+
+
+
+  #ggg p{
+    padding: 0 50px;
+    text-align: center;
+  }
+
   .main-nav {
     padding-right: 9vw;
   }
@@ -1273,13 +1343,19 @@ input {
   }
   #menuu {
     display: block;
+    transition: 0.3s all ease-in-out;
   }
   #menuu i {
     font-size: 30px;
     font-weight: 900;
   }
+  #menuu #menu-content h1, #menuu #menu-content i{
+    font-size: 20px;
+    font-weight: 100;
+  }
+
   #menuu #menu-content {
-    background-color: rgba(0, 0, 0, 0.795);
+    background-color: rgba(0, 0, 0, 0.859);
     left: 0;
     z-index: 3000;
     position: fixed;
@@ -1287,27 +1363,62 @@ input {
     width: 0;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 35px;
     opacity: 0;
     height: 100vh;
     justify-content: center;
     padding-left: 30px;
     top: 0;
   }
+
+  #menuu #menu-content #kkk h1{
+    height: 100%;
+  }
+
+  #menuu #menu-content #kkk{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  #menuu #menu-content #kkk button{
+    border: none;
+    padding: 3px 10px;
+    border-radius: 5px;
+  }
+
+  #logoutPhone button{
+    border: none;
+    padding: 1px 5px;
+    border-radius: 3px;
+  }
+
   #menuu #menu-content h1, #menuu #menu-content a {
     color: white;
     width: -moz-fit-content;
     width: fit-content;
     color: rgb(64, 186, 55);
+    color: white;
     font-weight: 700;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
+
   #menuu #menu-content a {
     transition: 0.4s all linear;
   }
   #menuu #menu-content a:hover {
-    text-decoration: underline;
+    color: #DAC0A3;
   }
+
+  #menuu #menu-content h1{
+    border-right: 4px solid white;
+    padding-right: 10px;
+    margin: 0;
+  }
+
   .carousel-upper-box {
     display: none;
   }
@@ -1459,6 +1570,7 @@ input {
     height: 130px;
   }
 }
+
 .blur-load::before, #receipeImg::before {
   content: "";
   position: absolute;
@@ -1553,8 +1665,6 @@ input {
   margin-bottom: 90px;
   min-height: 400px;
   align-items: center;
-  /* justify-content: center; */
-  /* min-width: 400px; */
 }
 #content #receipeImg {
   height: 250px;
@@ -1707,7 +1817,7 @@ button[id="NavBtn"]{
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  /* animation: spin 1s linear infinite alternate; */
+  animation: darkSpin 1s linear infinite alternate;
   color: white;
 }
 
@@ -1718,7 +1828,6 @@ button[id="NavBtn"]{
 
 @keyframes spin {
   0% {
-    /* transform: rotate(0deg); */
       border-bottom: 4px solid hotpink; /* Blue border */
       border-top: 4px solid rgb(64, 186, 55);
       border-right: 4px solid khaki;
@@ -1727,8 +1836,6 @@ button[id="NavBtn"]{
       border-bottom: 4px solid rgb(64, 186, 55); /* Blue border */
       border-left: 4px solid khaki; /* Blue border */
       border-right: 4px solid hotpink;
-      /* transform: rotate(360deg); */
-      /* border: 2px solid green; */
   }
 }
 
@@ -1847,7 +1954,7 @@ button[id="NavBtn"]{
 }
 .dark .receipeDetails a {
   color: rgb(64, 186, 55);
-}/*# sourceMappingURL=style.css.map */
+}
 
 .dark #content .basic-loader{
   border-top: 4px solid #3498db; /* Blue border */
@@ -1864,17 +1971,27 @@ button[id="NavBtn"]{
 
 @keyframes darkSpin {
   0% {
-    /* transform: rotate(0deg); */
+    
       border-bottom: 4px solid rgb(64, 186, 55); /* Blue border */
       border-top: 4px solid black;
-      border-right: 4px solid black;
+      border-right: 4px solid sandybrown;
       
   }
   100% {
-      border-bottom: 4px solid firebrick; /* Blue border */
-      border-left: 4px solid white; /* Blue border */
+      border-bottom: 4px solid black; /* Blue border */
+      border-left: 4px solid lightcoral; /* Blue border */
       border-right: 4px solid gold;
-      /* transform: rotate(360deg); */
-      /* border: 2px solid green; */
+  }
+}
+
+@media screen and (max-width: 1140px) {
+  .megaDropdown{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .pages{
+    display: none;
   }
 }

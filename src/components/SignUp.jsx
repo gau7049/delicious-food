@@ -3,7 +3,7 @@ import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged } from "fir
 import { Link, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import useLogin from "./Context/Context";
-import "../App.css";
+import "../Auth.css";
 
 // video
 import bgVideo from "../components/Video/foodbg.mp4";
@@ -49,10 +49,8 @@ function SignUp() {
     }  else {
       createUserWithEmailAndPassword(auth, email, password)
         .then(() => {
-          // console.log(response);
           toast.success("Successfully Signed Up");
           setIsLoggedIn(true);
-          // localStorage.setItem('myValue', true);
           navigate('/home');
         })
         .catch((err) => {

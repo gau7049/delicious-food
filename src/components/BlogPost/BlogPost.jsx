@@ -13,7 +13,6 @@ function BlogPost() {
 
   useEffect(() => {
     const blurDivs = document.querySelectorAll(".blur-load");
-    // console.log(blurDivs);
     blurDivs.forEach((div) => {
       const img = div.querySelector("img");
       function loaded() {

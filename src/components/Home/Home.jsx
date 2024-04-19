@@ -40,16 +40,12 @@ function Home() {
   let auth = getAuth();
 
   useEffect(() => {
-    // // When the component mounts, check if there's a value in localStorage
-    // const storedValue = localStorage.getItem('myValue');
-    // if (storedValue) {
-    //   // If there is, set the state to that value
-    //   setIsLoggedIn(storedValue);
-    // }
 
     onAuthStateChanged(auth, (data) => {
       data ? setIsLoggedIn(true) : setIsLoggedIn(false);
     })
+
+    if(isLoggedIn) document.querySelector("body").style.overflow = "visible"
 
   }, []);
 
@@ -119,8 +115,6 @@ function Home() {
     },
   ];
 
-  console.log("inside Home section", isLoggedIn, localStorage.getItem('myValue'))
-
   return (
     <>
 
@@ -136,11 +130,13 @@ function Home() {
           img={img4}
           cardTitle="Strawberry Cake"
           cardText="Simple & Delicious"
+          Recipe="strawberry"
         />
         <CardsWithReceipes
           img={img5}
           cardTitle="Chinesse Noodles"
           cardText="Simple & Delicious"
+          Recipe="chineeseNoodles"
         />
       </div>
 

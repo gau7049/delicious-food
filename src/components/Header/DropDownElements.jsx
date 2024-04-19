@@ -12,7 +12,6 @@ function DropDownElements({ hint }) {
         <NavLink to={"/blog-post"}>Blog Post</NavLink>
         <NavLink to={"/receipe-post"}>Receipe Post</NavLink>
         <NavLink to={"contact"}>Contact</NavLink>
-        <NavLink to={"elements"}>Elements</NavLink>
 
       
     </>

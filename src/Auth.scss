@@ -283,4 +283,26 @@ label{
     }
 }
 
+@media screen and (max-width: 700px) {
+    .login-page, .signup, .ph-num{
+        overflow: hidden;
+        .box{
+            // background-color: red;
+            min-height: 50vh;
+            max-width: 90vw;
+            padding: 20px 0;
+            // background-color: red;
+            form{
+                width: 71%;
+                // padding: 10px auto;
+            }
+        }
+    }
+    .ph-num{
+        .box{
+            min-height: 250px;
+        }
+    }
+}
+
 

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import useLogin from "./Context/Context";
-import "../App.css";
+import "../Auth.css";
 
 import bgVideo from "../components/Video/foodbg.mp4";
 import {
@@ -11,7 +11,6 @@ import {
   RecaptchaVerifier,
   signInWithPhoneNumber,
 } from "firebase/auth";
-import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import OtpInput from "otp-input-react";
 
@@ -24,7 +23,7 @@ function PhoneNumber() {
   const [otp, setOtp] = useState("");
   const [showOTP, setShowOTP] = useState(false);
   const [user, setUser] = useState(null);
-  const [countryCode, setCountryCode] = useState("");
+  const [countryCode, setCountryCode] = useState("91");
 
   useEffect(() => {
     return () => {
@@ -52,7 +51,6 @@ function PhoneNumber() {
 
   function onSignup(e) {
     e.preventDefault();
-    console.log("inside the function onSignup");
     onCaptchVerify();
 
     const appVerifier = window.recaptchaVerifier;
@@ -64,7 +62,6 @@ function PhoneNumber() {
 
     const formatPh = "+" + countryCode + phoneNumber;
 
-    console.log(phoneNumber)
     signInWithPhoneNumber(auth, formatPh, appVerifier)
       .then((confirmationResult) => {
         window.confirmationResult = confirmationResult;
@@ -72,8 +69,6 @@ function PhoneNumber() {
         toast.success("OTP sended successfully!");
       })
       .catch((error) => {
-        // alert(error)
-        // console.log(error);
         toast.error("Try Again, later");
       });
   }
@@ -83,13 +78,11 @@ function PhoneNumber() {
     window.confirmationResult
       .confirm(otp)
       .then(async (res) => {
-        console.log(res);
         setUser(res.user);
         setIsLoggedIn(true);
         navigate("/home");
       })
       .catch((err) => {
-        // console.log(err);
         toast.error("Try Again, later");
       });
   }

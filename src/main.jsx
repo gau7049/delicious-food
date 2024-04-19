@@ -8,7 +8,6 @@ import Home from './components/Home/Home.jsx'
 import AboutUs from './components/AboutUs/AboutUs.jsx'
 import BlogPost from './components/BlogPost/BlogPost.jsx'
 import Contact from './components/Contact/Contact.jsx'
-import Elements from './components/Elements/Elements.jsx'
 import ReceipePost from './components/ReceipePost/ReceipePost.jsx'
 import Search from './components/Search/Search.jsx'
 import App from './App.jsx'
@@ -24,7 +23,6 @@ const router1 = createBrowserRouter(
       <Route path='about' element={<AboutUs/>}></Route>
       <Route path='blog-post' element={<BlogPost/>}></Route>
       <Route path='contact' element={<Contact/>}></Route>
-      <Route path='elements' element={<Elements/>}></Route>
       <Route path='receipe-post' element={<ReceipePost/>}></Route>
       <Route path='search' element={<Search/>}></Route>
       <Route path='signup' element={<SignUp/>}></Route>

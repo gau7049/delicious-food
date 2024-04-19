@@ -250,4 +250,21 @@ label {
 }
 .ph-num .box form button:hover {
   border: 1px solid violet;
-}/*# sourceMappingURL=App.css.map */
+}
+
+@media screen and (max-width: 700px) {
+  .login-page, .signup, .ph-num {
+    overflow: hidden;
+  }
+  .login-page .box, .signup .box, .ph-num .box {
+    min-height: 50vh;
+    max-width: 90vw;
+    padding: 20px 0;
+  }
+  .login-page .box form, .signup .box form, .ph-num .box form {
+    width: 71%;
+  }
+  .ph-num .box {
+    min-height: 250px;
+  }
+}/*# sourceMappingURL=Auth.css.map */

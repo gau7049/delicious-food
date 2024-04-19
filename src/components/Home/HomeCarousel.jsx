@@ -4,20 +4,19 @@ import React from 'react'
 import img1 from '../images/bg1.jpg'
 import img2 from '../images/bg3.jpg'
 import img3 from '../images/bg7.jpg'
+import Popup from './Popup'
+import { useState } from 'react'
 
 function HomeCarousel() {
 
-  const close = (e) => {
-    e.target.parentElement.parentElement.style.display = "none";
-    document.body.style.overflow = "visible";
-  }
+  const [showPopup, setShowPopup] = useState(false);
 
-  const open = () => {
-    const r = document.querySelector(".burger");
+  const popUp = (Recipe) => {
+    const r = document.querySelector(`.${Recipe}`);
     r.style.display = "block";
     document.body.style.overflow = "hidden";
-
   }
+
 
   return (
     <>
@@ -30,30 +29,10 @@ function HomeCarousel() {
           <p>
           Treat yourself to delicious homemade burgers, where fresh ingredients and tasty combinations come together.
           </p>
-          <button onClick={open} className="green-background-with-left-border">See Receipe</button>
+          <button onClick={() => popUp("burger")} className="green-background-with-left-border">See Receipe</button>
       </div>
 
-      <div className="receipeDetails burger" style={{display: "none"}}>
-        <div id='cross'>
-                <button onClick={close}> X </button>
-            </div>
-            <h2 className='recipe-title'>Delicious Burger</h2>
-            <p className='receipe-category'>Burger</p>
-            <div className="receipe-instruct">
-                <h3>Instructions:</h3>
-                <div className="instruction-para">
-                    <p>To start, gather your ingredients: ground beef, breadcrumbs, an egg, onions, garlic, salt, pepper, burger buns, and your favorite toppings and condiments. Preheat your grill or skillet to medium-high heat. In a mixing bowl, combine the ground beef with breadcrumbs, beaten egg, diced onions, minced garlic, salt, and pepper, being careful not to overwork the mixture. Shape the mixture into patties slightly larger than your burger buns, making a slight indentation in the center of each to prevent bulging during cooking. Cook the patties on the preheated grill or skillet for about 4-5 minutes per side until they reach your desired level of doneness. While the patties cook, you can optionally toast the burger buns. Once the patties are done, assemble your burgers by placing them on the bottom half of each bun, adding your preferred toppings and condiments, then placing the top half of the bun. Serve your homemade burgers hot and enjoy the delicious flavors!</p>
-                </div>
-            </div>          
-            <div className="recipe-meal-img">
-                <img src={img1} alt="" />
-            </div>
-            <div className="receipe-link">
-                <a href="https://youtu.be/_q5GKCNZcHI?si=4OS-Z07Sc7sayTm3" target='_blank'>Watch Video</a>
-            </div>  
-      </div>
-
-
+      <Popup Recipe="burger" img={img1} />
 
         <div
           id="carouselExampleAutoplaying1"

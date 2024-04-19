@@ -42,11 +42,11 @@ function Footer() {
         <Icons />
         <img src={img8} alt="" />
         <p>
-          Copyright ©2024 All rights reserved | This template is made with{" "}
+          ©2024 All rights reserved. Designed and developer with{" "}
           <span>
             <i className="ri-heart-line"></i>
           </span>{" "}
-          by Colorlib
+          by Food Blog
         </p>
       </footer>
     </>
@@ -54,3 +54,4 @@ function Footer() {
 }
 
 export default Footer;
+

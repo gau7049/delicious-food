@@ -18,8 +18,6 @@ function Header() {
   const {isLoggedIn, setIsLoggedIn} = useLogin();
   const navigate = useNavigate();
 
-  console.log("Loggedin Home", isLoggedIn)
-
   const [isDarkMode, setIsDarkMode] = useState(() => {
     const storedDarkMode = JSON.parse(localStorage.getItem("darkMode"));
     return storedDarkMode !== null ? storedDarkMode : false;
@@ -69,7 +67,7 @@ function Header() {
             <h6>HOME</h6>
           </NavLink>
 
-          <div className="dropdown">
+          <div className="dropdown pages">
             <button className="dropbtn">
               <h6>
                 PAGES <i className="ri-arrow-down-s-line"></i>
@@ -100,13 +98,10 @@ function Header() {
             </div>
           </div>
 
-          {["RECEIPES", "4 VEGANS"].map((word) => {
-            return (
-              <NavLink to={"/receipe-post"} key={word}>
-                <h6>{word}</h6>
-              </NavLink>
-            );
-          })}
+          
+          <NavLink to={"/receipe-post"}>
+            <h6>RECEIPES</h6>
+          </NavLink>
 
           <NavLink to={'/contact'}>
             <h6>CONTACT</h6>

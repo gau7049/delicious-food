@@ -19,7 +19,6 @@ function Layout() {
 
   return (
     <>
-      {console.log("Inside the Layout", isLoggedIn)}
     <LoginProvider value={{isLoggedIn, setIsLoggedIn}}>
     {
       isLoggedIn ? (
