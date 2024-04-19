@@ -1,8 +1,18 @@
-# React + Vite
+# Food Blog Project 🍔
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the Food Blog Project, a web application created using React.js, Firebase, and Bootstrap.
 
-Currently, two official plugins are available:
+## Features 🌟
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Authentication**: Firebase authentication is implemented, requiring users to log in before accessing the home section of the website. Google login is supported, and there's a "forgot password" feature with OTP authentication.
+- **Dark/Light Mode**: Toggle between dark and light mode for improved user experience.
+- **React Concepts**: Utilize React concepts such as context, component reusability, hooks, and router for seamless navigation between different pages.
+- **API Integration**: Implement an API to enhance the project, providing users with the ability to view recipe instructions with YouTube links.
+
+## Technologies Used 💻
+
+- React.js
+- Firebase (Authentication and Database)
+- SCSS (Syntactically Awesome Style Sheet)
+- Bootstrap
+- External API (for recipe instructions and YouTube links)
