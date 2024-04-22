@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 
 // images
-import img1 from "../images/logo (1).png";
+import img1 from "../images/logo-food.png";
 import Mobile from "./Mobile";
 import Icons from "../Icons";
 import DropDownElements from "./DropDownElements";

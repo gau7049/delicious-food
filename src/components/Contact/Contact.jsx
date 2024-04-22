@@ -1,6 +1,5 @@
 import React from 'react'
 import Hero from '../Hero'
-import img1 from '../images/logo (1).png'
 import ContactBox from '../ContactBox'
 
 function Contact() {
@@ -10,7 +9,7 @@ function Contact() {
       <Hero klass='contactImg' title='Recipe'/>
 
       <div id="contactContainer">
-        <img src={img1} alt="" />
+        {/* <img src={img1} alt="" /> */}
         <div id="container-ka-container">
           <div id="ckc-content">
             <p>

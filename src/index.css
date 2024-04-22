@@ -45,6 +45,11 @@ button {
 .upper-nav i {
   transition: 0.4s all linear;
 }
+
+.main-nav img{
+  height: 100px;
+}
+
 .upper-nav i:hover {
   color: rgb(64, 186, 55);
 }
@@ -644,6 +649,10 @@ footer {
   align-items: center;
   justify-content: space-between;
   padding: 40px 35px;
+}
+
+footer img{
+  height: 80px;
 }
 
 footer i {
@@ -1268,7 +1277,43 @@ input {
   gap: 40px;
 }
 
+.basic-loader{
+  border: 4px solid green; /* Light grey border */
+  border-top: 4px solid rgb(28, 131, 20); /* Blue border */
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  animation: darkSpin 1s linear infinite alternate;
+  color: white;
+}
+
+
+#content .basic-loader i{
+  color: black;
+  font-size: 40px;
+}
+
+
+
 @media screen and (max-width: 700px) {
+
+  .main-nav img{
+    height: 80px;
+  }
+
+  .basic-loader{
+    height: 80px;
+    width: 80px;
+  }
+
+  #content .basic-loader i{
+    color: black;
+    font-size: 30px;
+  }
 
   #search{
     overflow: hidden;
@@ -1805,25 +1850,6 @@ a button[id="NavBtn"]{
 
 button[id="NavBtn"]{
   background-color: rgb(64, 186, 55);
-}
-
-.basic-loader{
-  border: 4px solid green; /* Light grey border */
-  border-top: 4px solid rgb(28, 131, 20); /* Blue border */
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  animation: darkSpin 1s linear infinite alternate;
-  color: white;
-}
-
-#content .basic-loader i{
-  color: black;
-  font-size: 40px;
 }
 
 @keyframes spin {

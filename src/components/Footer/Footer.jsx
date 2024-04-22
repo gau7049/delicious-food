@@ -8,7 +8,7 @@ import insta4 from "../images/insta4.jpg";
 import insta5 from "../images/insta5.jpg";
 import insta6 from "../images/insta6.jpg";
 import insta7 from "../images/insta7.jpg";
-import img8 from "../images/logo (1).png";
+import img8 from "../images/logo-food.png";
 import Icons from "../Icons";
 
 const imageArray = [

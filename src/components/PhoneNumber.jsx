@@ -70,6 +70,7 @@ function PhoneNumber() {
       })
       .catch((error) => {
         toast.error("Try Again, later");
+        console.log(error);
       });
   }
 
@@ -84,6 +85,7 @@ function PhoneNumber() {
       })
       .catch((err) => {
         toast.error("Try Again, later");
+        console.log(err)
       });
   }
 
