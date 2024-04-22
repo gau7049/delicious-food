@@ -1,4 +1,4 @@
-# Food Blog Project 🍔
+# Delicious Food Project 🍔
 
 Welcome to the Food Blog Project, a web application created using React.js, Firebase, and Bootstrap.
 
