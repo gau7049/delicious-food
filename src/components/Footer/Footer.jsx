@@ -46,7 +46,7 @@ function Footer() {
           <span>
             <i className="ri-heart-line"></i>
           </span>{" "}
-          by Food Blog
+          by Delicious Food
         </p>
       </footer>
     </>
